@@ -1,6 +1,7 @@
-FROM python:3-slim
+FROM node:12
+WORKDIR /usr/src/app
+COPY package*.json ./
+RUN npm install
+COPY . .
 EXPOSE 8080
-ADD . .
-RUN pip install Flask
-ENTRYPOINT ["python"]
-CMD ["app.py"]
+CMD [ "node", "app.js" ]
