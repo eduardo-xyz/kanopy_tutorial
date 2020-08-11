@@ -33,9 +33,9 @@ steps:
     client_only: true
     helm_repos: mongodb=https://10gen.github.io/helm-charts
     namespace: grc
-    release: kanopy_tutorial
+    release: kanopy-tutorial
     tiller_ns: grc
-    values: image.tag=git-${DRONE_COMMIT_SHA:0:7},image.repository=795250896452.dkr.ecr.us-east-1.amazonaws.com/grc/${DRONE_REPO_NAME},ingress.enabled=true,ingress.hosts[0]=kanopy_tutorial.grc.staging.corp.mongodb.com
+    values: image.tag=git-${DRONE_COMMIT_SHA:0:7},image.repository=795250896452.dkr.ecr.us-east-1.amazonaws.com/grc/${DRONE_REPO_NAME},ingress.enabled=true,ingress.hosts[0]=kanopy-tutorial.grc.staging.corp.mongodb.com
     api_server: https://api.staging.corp.mongodb.com
     kubernetes_token:
       from_secret: staging_kubernetes_token
